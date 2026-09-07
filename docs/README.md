@@ -51,7 +51,7 @@ bot.on('kicked', console.error)
 
 已执行的专项检查包括 Team 的 1.8.9 / 1.21.11 / 26.2 三个版本、窗口缓存三种情形和资源包 UUID 两种事件。Paper 26.2 的实机结果必须区分已提交依赖与尚未发布的本地改动。
 
-资源包状态响应不是资源包下载、渲染或模型视觉验收；本机器人也不是完整 Minecraft 图形客户端。时钟按服务端 world_clock / dimension_type.default_clock 映射选择，不猜固定 ID；未知维度返回空时间。安装器拒绝未审查数据版本及未知数据覆盖，仅允许已核验旧数据迁移。完整旧版兼容矩阵仍未完成，不能把一次登录当作全部功能完成。
+资源包状态响应不是资源包下载、渲染或模型视觉验收；本机器人也不是完整 Minecraft 图形客户端。时钟按服务端 world_clock / dimension_type.default_clock 映射选择，不猜固定 ID；未知维度返回空时间。安装器拒绝未审查数据版本及未知数据覆盖，仅允许已核验旧数据迁移。28 个声明版本已完成内部矩阵（576 通过、40 项版本不适用跳过、0 失败）；27 个旧版真实服务端基础操作和原生 Paper 26.2 验收通过。这不等于每个历史补丁版本或每项业务功能都经过验证。
 
 ## 开发检查
 
@@ -73,3 +73,7 @@ node tools/data-install-regression.mjs
 - [Minecraft MCP Server](https://github.com/zkonikishi/Minecraft-MCP-Server/tree/26.2) 是另一个项目：它把机器人操作封装为 MCP 工具，并管理重连、命令响应和生命周期。本仓库只提供机器人库。
 - 原有翻译、教程和示例保留作上游参考，不应当成 fork 的发布或验收承诺。
 - 原作者及贡献者归属保留，见 [LICENSE](https://github.com/zkonikishi/Mineflayer/blob/26.2/LICENSE)。
+
+## 完整收尾记录
+
+参见 [2026-09-08 兼容验收](https://github.com/zkonikishi/Mineflayer/blob/26.2/docs/compatibility-2026-09-08.md)。本项目是无头协议客户端，不需要图形 Minecraft 客户端；模型渲染不是发布门禁。
